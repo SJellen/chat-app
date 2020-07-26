@@ -20,7 +20,7 @@ body
     font-family: 'Rubik', sans-serif
     max-width: 1440px
     margin: 0 auto
-    background-color: #fafafa
+    background-color: lightblue
     height: 100vh
     overflow: hidden
     
@@ -56,12 +56,13 @@ body
     margin-left: 25%
     margin-top: 5rem
     border-radius: 25px;
-    border: 9px solid green
+    border: 9px solid $white
+    
     .notch
         position: relative
         z-index: 3
         margin: 0 auto
-        margin-top: -7.55px
+        margin-top: -6.55px
         width: 130px
         height: 20px
         padding-top: 5px
@@ -114,11 +115,53 @@ body
             right: 2%
             top: 45%
 
-    .image-container
-        .image
-            width: 40px
+    .message
+        font-size: .5rem
+        width: 125px
+        min-height: 15px
+        background-color: hsla(270, 7%, 64%, .25)
+        border-radius: 7.5px
+        text-align: left
+        
+        margin: 10px
+        line-height: 1.5
+        p
+            color: $moderateViolet
+            padding: 5px
+
+
+    #message3, #message4 
+        margin-left: 42%
+        padding: 0
+        background-color: $white
+        p
+            color: black
             
 
+    #message4
+        width: fit-content
+        
+        margin-left: 63% 
+
+             
+    .image-container
+        margin-left: 41%
+        margin-top: 10px
+        .image
+            width: 40px
+            border-radius: 10px
+            
+            
+    .price-box
+        background: hsl(264, 100%, 61%)
+        background: linear-gradient(-200deg, hsl(293, 100%, 63%) 20%, hsl(264, 100%, 61%) 50%)
+        width: 150px
+        margin: 10px
+        color: $white
+        font-size: .5rem
+        border-radius: 25px
+        border-bottom-left-radius: 10px
+        
 
 
 
