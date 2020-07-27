@@ -13,17 +13,24 @@ $lightViolet: hsl(264, 100%, 61%)
 $white: hsl(0, 0%, 100%)
 $lightGrayishViolet: hsl(270, 20%, 96%)
 $veryDarkDesaturatedViolet: hsl(271, 36%, 24%)
-$veryLightMagenta: hsl(289, 100%, 72%) 
+$veryLightMagenta: hsl(289, 100%, 72%)
+
+     
 
 body 
     font-size: 16px
     font-family: 'Rubik', sans-serif
     max-width: 1440px
     margin: 0 auto
-    background-color: lightblue
+    background-color: $lightGrayishViolet
     height: 100vh
     overflow: hidden
+    @media screen and (max-width: 700px)
+        overflow-y: scroll
+        overflow-x: hidden
     
+
+   
 
 .left-background 
     position: absolute
@@ -35,6 +42,10 @@ body
     border-radius: 220px
     margin-top: -19.5rem
     margin-left: -2rem
+    @media screen and (max-width: 1100px) 
+        margin-left: -10rem
+    @media screen and (max-width: 700px)
+        margin-top: -95%    
 
 .right-background 
     position: absolute
@@ -46,7 +57,9 @@ body
     border-radius: 220px
     margin-top: 10%
     right: -10%
-    opacity: .05
+    opacity: .035
+    @media screen and (max-width: 700px)
+        display: none
 
 .phone 
     background-color: $lightGrayishViolet
@@ -57,7 +70,12 @@ body
     margin-top: 5rem
     border-radius: 25px;
     border: 9px solid $white
-    
+    box-shadow: 10px 10px 50px $darkGrayishViolet
+    @media screen and (max-width: 1100px) 
+        margin-left: 10%
+    @media screen and (max-width: 700px)
+        margin-left: 27.5%   
+        
     .notch
         position: relative
         z-index: 3
@@ -154,27 +172,92 @@ body
             
     .price-box
         background: hsl(264, 100%, 61%)
-        background: linear-gradient(-200deg, hsl(293, 100%, 63%) 20%, hsl(264, 100%, 61%) 50%)
+        background: linear-gradient(45deg, hsl(293, 100%, 63%) 20%, hsl(264, 100%, 61%) 80%)
         width: 150px
         margin: 10px
         color: $white
         font-size: .5rem
-        border-radius: 25px
-        border-bottom-left-radius: 10px
+        border-radius: 10px
+        border-bottom-left-radius: 5px
+        padding: 7px 0
+        .circle
+            z-index 2
+            position: absolute
+            height: 10px
+            width: 10px
+            border-radius: 50%
+            border: 1px solid $paleViolet
+            margin-left: 6px
+            margin-top: 2px
+        .time-walk
+            margin-left: 30px   
+            font-weight: 300
+        .price
+            font-size: .80rem
+            font-weight: 700
+            min-height: 30px
+        #price1
+            margin-left: 17%    
+        #price2
+            margin-left: 27.5%
+
+    .search-bar
+        background-color: $white
+        width: 90%
+        margin: 10px auto
+        height: 35px
+        border-radius: 25px 
+    .placeholder
+        position: absolute
+        margin-top: 12.5px
+        font-size: .65rem
+        margin-left: 20px
+        color: hsla(270, 7%, 64%, .5)
+    .round
+        z-index: 5
+        position: absolute
+        background-color: black
+        height: 25px
+        width: 25px
+        margin-left: 76.5%
+        margin-top: 4px
+        border-radius: 50%   
+    .right-arrow
+        z-index: 7
+        position: absolute
+        margin-top: 7px
+        margin-left: 80.5%
+        color: $white
+        font-weight: 700
         
-
-
-
-
+        
+        
+           
 .word-box 
-    width: 500px
+    width: 440px
     height: 250px
-    border: 1px solid red
-    margin-left: 55% 
+    margin-left: 51% 
     position: absolute
     margin-top: 15%
+    @media screen and (max-width: 950px) 
+        width: 300px
+    @media screen and (max-width: 700px) 
+        margin-left: 25%
+        margin-top: 100%
+        padding-bottom: 5rem
+    @media screen and (max-width: 600px)
+        padding-top: 20%
+    h1
+        color: $veryDarkDesaturatedViolet
+        font-weight: 500
+        font-size: 2.55rem
+        @media screen and (max-width: 950px)
+            font-size: 2.45rem
+    p
+        color: $darkGrayishViolet
+        line-height: 1.5
+        @media screen and (max-width: 950px)
+            text-align: center
 
-    
 
-
-    
+ 
